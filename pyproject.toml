@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtestlint"
+version = "1.0.0"
+description = "Find look-ahead bias and data leakage in Python backtest code (pandas, numpy, scikit-learn patterns). AST-based, notebooks supported, no dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "TPOALOS"}]
+keywords = ["backtesting", "quant", "lookahead-bias", "data-leakage", "linter", "pandas", "static-analysis"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://github.com/TPOALOS/backtestlint"
+Issues = "https://github.com/TPOALOS/backtestlint/issues"
+
+[project.scripts]
+backtestlint = "backtestlint.cli:main"
+
+[tool.setuptools]
+packages = ["backtestlint"]
